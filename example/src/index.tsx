@@ -1,6 +1,6 @@
 import { serve } from "bun";
 import index from "./index.html";
-import { createBunRpcHandler } from "./bunRpcServer";
+import { createBunRpcHandler } from "../../lib";
 
 const exposedFunctions = Object.freeze({
   health: () => 'ok',

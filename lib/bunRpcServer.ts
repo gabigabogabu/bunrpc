@@ -1,5 +1,5 @@
-import { Server } from "bun";
-import { ExposedFunctions } from "./common";
+import { type Server } from "bun";
+import { type ExposedFunctions } from "./common";
 
 const get = (obj: any, path: string) => path.split('.').reduce((acc, part) => acc && acc[part], obj);
 

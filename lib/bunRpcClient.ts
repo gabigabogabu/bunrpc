@@ -1,4 +1,4 @@
-import { ExposedFunctions } from "./common";
+import { type ExposedFunctions } from "./common";
 
 // Type to convert server functions to client RPC functions
 type ClientRPC<T> = {

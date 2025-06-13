@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { createBunRpcClient } from "./bunRpcClient";
+import { createBunRpcClient } from "../../lib";
 import "./index.css";
 import type { ExposedFunctions } from "./index";
 
