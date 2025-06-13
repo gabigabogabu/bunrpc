@@ -1,6 +1,5 @@
 import { serve } from "bun";
-import index from "./index.html";
-import { createBunRpcHandler } from "../../lib";
+import { createBunRpcHandler } from "..";
 
 const exposedFunctions = Object.freeze({
   health: () => 'ok',
@@ -17,7 +16,6 @@ export type ExposedFunctions = typeof exposedFunctions;
 const server = serve({
   routes: {
     "/rpc/*": {POST: createBunRpcHandler(exposedFunctions, '/rpc')},
-    "/*": index,
   },
 });
 
