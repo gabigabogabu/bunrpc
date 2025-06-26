@@ -54,8 +54,8 @@ const createBunRpcHandler = (funcs: ServerFunctions): (req: Request, server: Ser
       }), { status: 404 });
 
     try {
-      const {result, httpCode} = await func(args);
-      return new Response(JSON.stringify(result), { status: httpCode || 200 });
+      const result = await func(args);
+      return new Response(JSON.stringify(result), { status: 200 });
     } catch (error) {
       return errorResponse(error);
     }

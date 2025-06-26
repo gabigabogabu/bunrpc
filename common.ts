@@ -1,10 +1,5 @@
-export type ServerFunction = (...args: any[]) => {
-  result: any;
-  httpCode?: number;
-};
-
 export type ServerFunctions = {
-  [key: string]: ServerFunctions | ServerFunction;
+  [key: string]: ServerFunctions | Function;
 }
 
 export class RpcError extends Error {

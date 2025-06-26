@@ -2,10 +2,10 @@ import { serve } from "bun";
 import { createBunRpcHandler } from "..";
 
 const exposedFunctions = Object.freeze({
-  health: () => ({result:'ok', httpCode: 200}),
+  health: () => 'ok',
   greetings: {
-    hello: ({ name }: { name: string }) => ({result: `Hello ${name}`}),
-    goodbye: ({ name }: { name: string }) => ({result: `Goodbye ${name}`}),
+    hello: ({ name }: { name: string }) => `Hello ${name}`,
+    goodbye: ({ name }: { name: string }) => `Goodbye ${name}`,
   },
   error: () => { throw new Error('test') }
 })
